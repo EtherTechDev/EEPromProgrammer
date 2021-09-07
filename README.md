@@ -3,14 +3,15 @@ A project using Arduino and Node.js to read, write, fill, erase, protect, unprot
 
 Necessary components that you need:
 * A good quality Breadboard
-* Connectors/wires to Arduino
 * Arduino Mega 2560
-* Node js (any version above 1.0)
+* Power to Arduino board.
+* Connectors/wires between Breadboard and Arduino (usually delivered with Arduino board)
+* Node js (any version above 1.0 works fine)
 
 # Contents
 
-Using the components above, you can build your own EEProm-programmer for your projects.
-You will get programmatic control over the common operations (Read, Write, Fill, Erase, Protect, Unprotect).
+Using the components above, you can build your own programmatically controlled EEProm-programmer for your projects.
+You will be able to perform common operations to the EEPROM: Read, Write, Fill, Erase, Protect, Unprotect.
 You will be able to programmatically read a file and write the content to EEProm, or read the content of EEProm and put it in a file.
 Also, you will be able to fill the EEProm with a value or erase it using the erase instruction (fills it instantly with 0xff - currently supported by Atmel chips).
 
@@ -19,3 +20,10 @@ AT28C256 (256K (32K x 8) Paged Parallel EEPROM)
 
 (more to be added)
 
+# How it works
+1. Connect the Arduino and Breadboard according to instructions.
+2. Install Node js.
+3. Download and unpack the project.
+4. Configure the Node js with correct COM port.
+5. Either make changes to the code to for operations, which suits your needs (read, write etc.)
+6. Alternatively, run the example code (e.g. node exampleprogram.js -w eprom.bin COM3 (writes the content of local file eprom.bin to the EEPROM)
